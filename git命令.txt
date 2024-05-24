@@ -1,0 +1,24 @@
+git init：初始化成一个Git可管理的仓库
+
+git status：查看当前的状态
+--红字表示未add到Git仓库上的文件
+--绿字表示已add到Git仓库上的文件
+
+git add . ：把该目录下的所有文件添加到仓库
+
+git commit：把项目提交到仓库
+-m 后面引号里面是本次提交的注释内容，可以不写，但最好写上，不然会报错
+git commit -m "first commit"
+
+创建SSH Key：ssh-keygen -t rsa -C "youxiang@qq.com"
+
+验证SSH Key是否成功，在git bash里输入下面的命令
+ssh -T git@github.com
+关联远程仓库：git remote add origin 远程仓库地址
+
+
+新建的远程仓库是空的，要加上-u这个参数
+git push -u origin master
+仓库不是空的，不用加上-u
+git push origin master
+
